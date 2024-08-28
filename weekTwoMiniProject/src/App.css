@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(218, 28%, 13%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem; /* Using relative units */
+  line-height: 1.6;
+}
+
+a {
+  color: hsl(176, 68%, 64%);
+  text-decoration: none;
+}
+
+a:focus, button:focus {
+  outline: 3px solid hsl(176, 68%, 64%);
+}
+
+/* Header */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem; /* Adjust for responsiveness */
+}
+
+.header {
+  display: flex;
+  padding: 0.5rem;
+  gap: 1.35rem;
+}
+
+.header a {
+  font-size: 1rem; /* Ensure readable font size */
+}
+
+.component01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.component01 button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  width: 150px;
+  background-color: hsl(176, 68%, 64%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.component01 button:hover {
+  background-color: hsl(176, 68%, 50%);
+}
+
+/* Card 01 */
+.card01Component {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 85px;
+  flex-wrap: wrap;
+}
+
+.grid-card01 {
+  text-align: center;
+}
+
+/* Component 02 */
+.component02 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 85px;
+}
+
+.component02 span a {
+  display: flex;
+}
+
+/* Card 02 */
+.card02Component {
+  background-color: hsl(219, 30%, 18%);
+  padding: 25px;
+  margin-top: 85px;
+}
+
+.card02Component img {
+  border-radius: 50%;
+  height: 35px;
+}
+
+.card2Wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card02 {
+  display: flex;
+  gap: 5px;
+}
+
+/* Card 03 */
+.card03Component {
+  background-color: hsl(217, 28%, 15%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 620px;
+  margin: auto;
+  position: relative;
+  top: 80px;
+  border-radius: 10px;
+  margin-top: 95px;
+  padding: 20px;
+}
+
+.card03Component input, button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.card03Component button {
+  background-color: hsl(176, 68%, 64%);
+  color: hsl(0, 0%, 100%);
+  margin-left: 15px;
+}
+
+.card03Component input {
+  width:255px;
+}
+
+/* Footer */
+.footerComponent {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: hsl(216, 53%, 9%);
+  align-items: flex-start;
+  padding: 150px 0px 0px 0px;
+  flex-wrap: wrap;
+  justify-content: baseline;
+}
+
+.footerComponent span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footerComponent ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-icons a {
+  border: solid white 1px;
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icons {
+  display: flex;
+  gap: 3px;
+}
+.logo {
+  width: 80px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .Header, .header {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card01Component {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .component02 {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .card03Component {
+    max-width: 90%;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* .footerComponent {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 20px 20px 20px;
+  }
+
+  .footerComponent ul {
+    align-items: center;
+    text-align: center;
+    align-items: flex-start;
+  } */
+
+  .social-icons {
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Header, .header {
+    margin: 15px;
+  }
+
+  .card03Component input {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .card03Component button {
+    width: 100%;
+    margin-left: 0;
+  }
+  .card2Wrapper{
+    flex-direction: column;
+    gap: 20px;
+   }
+   
+
+  .footerComponent {
+    padding: 150px;
+  }
+
+  .footerComponent span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.875rem;
+  }
+
+  .Header {
+    margin: 10px;
+  }
+
+  .card03Component {
+    max-width: 95%;
+    padding: 15px;
+  }
+  .card2Wrapper{
+   flex-direction: column;
+   gap: 20px;
+  }
+  .footerComponent span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+ 
+}
